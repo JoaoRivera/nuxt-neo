@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nuxt Neo | Services Module #</title>
+    <meta name="description" content="A nuxt.js module that implements a universal api layer, same-way compatible between server and client side.">
+    
+    
+    <link rel="preload" href="/nuxt-neo/assets/css/5.styles.83be8e7c.css" as="style"><link rel="preload" href="/nuxt-neo/assets/js/app.d1f6784c.js" as="script"><link rel="preload" href="/nuxt-neo/assets/js/1.be243370.js" as="script"><link rel="prefetch" href="/nuxt-neo/assets/js/0.2707b1e7.js"><link rel="prefetch" href="/nuxt-neo/assets/js/2.1cd9f1f7.js"><link rel="prefetch" href="/nuxt-neo/assets/js/3.75dbe02c.js"><link rel="prefetch" href="/nuxt-neo/assets/js/4.987235b3.js">
+    <link rel="stylesheet" href="/nuxt-neo/assets/css/5.styles.83be8e7c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/nuxt-neo/" class="home-link router-link-active"><!----><span class="site-name">
+      Nuxt Neo
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/nuxt-neo/" class="nav-link">English</a></li></ul></div></div><a href="https://github.com/ezypeeze/nuxt-neo" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/nuxt-neo/" class="nav-link">English</a></li></ul></div></div><a href="https://github.com/ezypeeze/nuxt-neo" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><ul class="sidebar-links"><li><a href="/nuxt-neo/" class="sidebar-link">Intro</a></li><li><a href="/nuxt-neo/getting-started.html" class="sidebar-link">Getting Started</a></li><li><a href="/nuxt-neo/work-flow-usage.html" class="sidebar-link">Work flow Usage</a></li><li><a href="/nuxt-neo/api-module.html" class="sidebar-link">API Module</a></li><li><a href="/nuxt-neo/services-module.html" class="active sidebar-link">Services Module</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/nuxt-neo/services-module.html#configuration" class="sidebar-link">Configuration</a></li><li class="sidebar-sub-header"><a href="/nuxt-neo/services-module.html#creating-a-service" class="sidebar-link">Creating a service</a></li></ul></li></ul></div><div class="page"><div class="content"><h1 id="services-module"><a href="#services-module" aria-hidden="true" class="header-anchor">#</a> Services Module</h1><h2 id="configuration"><a href="#configuration" aria-hidden="true" class="header-anchor">#</a> Configuration</h2><p>The default options of the service module are:</p><pre class="language-js"><code>services<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// services folder -- required</span>
+    directory<span class="token punctuation">:</span> __dirname <span class="token operator">+</span> <span class="token string">'/api'</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="creating-a-service"><a href="#creating-a-service" aria-hidden="true" class="header-anchor">#</a> Creating a service</h2><p>Services are pretty much your data providers (it's sometimes called repositories), but it can be whatever your want,
+even a bag of utility functions. Services are request dependent. We provide a simple, lazy-loaded,
+way to abstract your controllers from, for example, database connectors.</p><p>To make the services module to work, you should first create a new folder on your project, lets assume <code>~/services</code>.</p><pre class="language-js"><code><span class="token punctuation">{</span>
+  modules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token string">'nuxt-neo'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      services<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          directory<span class="token punctuation">:</span> __dirname <span class="token operator">+</span> <span class="token string">'/services'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Now lets create our <code>Todo Service</code> class (<code>~/services/todos.js</code>):</p><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">TodoService</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>request <span class="token operator">=</span> request<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">async</span> <span class="token function">fetchAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// your database/cache/private api todos fetching logic</span>
+        
+        <span class="token keyword">return</span> todos<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">async</span> <span class="token function">fetchById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token comment">// your database/cache/private api todos fetching logic</span>
+                
+         <span class="token keyword">return</span> todo<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">async</span> <span class="token function">create</span><span class="token punctuation">(</span>title<span class="token punctuation">,</span> content<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// your database/cache/private api todos fetching logic</span>
+                    
+        <span class="token keyword">return</span> todo<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> TodoService<span class="token punctuation">;</span>
+</code></pre><p>Now lets change our <code>TodoController</code> class (<code>~/api/todos.js</code>):</p><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">TodosController</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Everytime this class instantiates, request object will be injected into the construtor params.</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>request <span class="token operator">=</span> request<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">async</span> <span class="token function">allAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> todos <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getService</span><span class="token punctuation">(</span><span class="token string">'todos'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fetchAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            total<span class="token punctuation">:</span> todos<span class="token punctuation">.</span>length<span class="token punctuation">,</span>
+            items<span class="token punctuation">:</span> todos
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+     <span class="token comment">// An object is passed to all actions, with the route params, query string and body.</span>
+    <span class="token keyword">async</span> <span class="token function">getAction</span><span class="token punctuation">(</span><span class="token punctuation">{</span>params<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> todo <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getService</span><span class="token punctuation">(</span><span class="token string">'todos'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fetchById</span><span class="token punctuation">(</span>params<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">return</span> todo<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// An object is passed to all actions, with the route params, query string and body.</span>
+    <span class="token keyword">async</span> <span class="token function">createAction</span><span class="token punctuation">(</span><span class="token punctuation">{</span>params<span class="token punctuation">,</span> query<span class="token punctuation">,</span> body<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        
+        <span class="token keyword">return</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getService</span><span class="token punctuation">(</span><span class="token string">'todos'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>body<span class="token punctuation">.</span>title<span class="token punctuation">,</span> body<span class="token punctuation">.</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// Shortcut to access to getService (you can always create a controller class and extend it from there).</span>
+    <span class="token function">getService</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">getService</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Required: This will be the action to route mapper.</span>
+TodosController<span class="token punctuation">.</span><span class="token constant">ROUTES</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    allAction<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token comment">// your route will be /api/todos'/'</span>
+        verb<span class="token punctuation">:</span> <span class="token string">'GET'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    getAction<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> <span class="token string">'/:id'</span><span class="token punctuation">,</span> <span class="token comment">// your route will be /api/todos/:id - route paths are express-like</span>
+        verb<span class="token punctuation">:</span> <span class="token string">'GET'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    createAction<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token comment">// your route will be /api/todos'/'</span>
+        verb<span class="token punctuation">:</span> <span class="token string">'POST'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> TodosController<span class="token punctuation">;</span>
+</code></pre><p>As you can see, now we can simply access to the todo service, calling <code>getService('todos')</code>.
+<code>'todos'</code> is the name of the service file (without the <code>.js</code> part).</p></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/nuxt-neo/api-module.html" class="prev">
+          API Module
+        </a></span><!----></p></div></div></div></div>
+    <script src="/nuxt-neo/assets/js/1.be243370.js" defer></script><script src="/nuxt-neo/assets/js/app.d1f6784c.js" defer></script>
+  </body>
+</html>
